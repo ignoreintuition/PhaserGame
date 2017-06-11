@@ -7,13 +7,11 @@ var playState = {
     create: function () {
         var self = this;
         var map;
-        map = game.add.tilemap("level");
+        map = game.add.tilemap("level2");
         map.addTilesetImage("tileset", "tiles");
-        
-        
-        
-        self.layer = map.createdLayer("Tile Layer 1");
-        
+
+        self.layer = map.createLayer("Tile Layer 1");
+
         self.player = new Player(300, 200);
         game.add.existing(self.player);
         game.physics.enable(self.player, Phaser.Physics.ARCADE);
